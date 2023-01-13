@@ -44,3 +44,8 @@ https://github.com/settings/keys -> new ssh key
 
 ## Testar conexão
 ssh -T git@github.com
+
+
+# Usuario Git
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
