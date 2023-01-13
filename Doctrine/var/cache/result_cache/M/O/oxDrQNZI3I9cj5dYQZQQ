@@ -1,0 +1,9 @@
+<?php //3d74c908cd90c646c1e07b351cd4154489c19cb6
+
+return [1667760798, [
+    'query=SELECT COUNT(s0_.id) AS sclr_0 FROM Student s0_&params=a:0:{}&types=a:0:{}&connectionParams=b80132a9d04dc3f67433bd4a3e295e5c8e3d9d414e72255c68b52a367c63d7b7' => [
+        [
+            'sclr_0' => 1,
+        ],
+    ],
+]];

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titleFrom }}{% endblock %}
+
+{% block body %}
+{{ form_start(seriesForm) }}
+{{ form_row(seriesForm.seriesName) }}
+{{ form_row(seriesForm.seasonsQuantity) }}
+	{{ form_row(seriesForm.episodesPerSeason) }}
+{{ form_row(seriesForm.save, {'attr': {'class': 'btn-dark'}}) }}
+{{ form_end(seriesForm) }}
+	{#
+	{{ form_start(seriesForm) }}
+	<div class="my-custom-class-for-errors">
+		{{ form_errors(seriesForm) }}
+	</div>
+	<div class="row">
+		<div class="col-6">
+			{{ form_label(seriesForm.name, "Nome") }}
+		</div>
+		<div class="col-6">
+			{{ form_widget(seriesForm.name, {'attr': {'class': 'teste'}}) }}
+		</div>
+		<div class="col-12">
+			{{ form_errors(seriesForm.name) }}
+		</div>
+	</div>
+	{{ form_end(seriesForm) }}
+	#}
+	<!--
+	{#{form(seriesForm)}#}
+
+	<form method="POST"
+		action="{{ series is defined ? path('app_edit_save_series', {series: series.id}) : path('app_add_series') }}">
+		{% if series is defined %}
+			<input type="hidden" name="_method" value="PATCH">
+		{% endif %}
+		<div class="mb-3">
+			<label for="name" class="form-label">Nome da Série:</label>
+			<input type="text" name="name" id="id" class="form-control" value="{{ series is defined ? series.name : "" }}">
+		</div>
+		<button class="btn btn-dark mb-3">
+			{#
+				{% if series is defined %}
+					Editar
+				{% else %}
+					Adicionar
+				{% endif %}
+			#}
+			{{ series is defined ? 'Editar' : 'Adicionar' }}
+		</button>
+	</form>
+	-->
+
+
+
+{% endblock %}

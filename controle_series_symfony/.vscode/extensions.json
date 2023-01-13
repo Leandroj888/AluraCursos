@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"onecentlin.laravel-blade",
+		"rafa-acioly.laravel-helpers",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"naumovs.color-highlight",
+		"dzannotti.vscode-babel-coloring",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-complete-tag",
+		"formulahendry.auto-rename-tag"
+	]
+}

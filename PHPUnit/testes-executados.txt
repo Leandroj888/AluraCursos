@@ -1,0 +1,19 @@
+Leilao (Alura\Leilao\tests\Model\Leilao)
+ [x] Sem 5 lances
+ [x] Sem lance repetido
+ [x] Receber lances with data set "2-lances"
+ [x] Receber lances with data set "1-lance"
+
+Avaliador (Alura\Leilao\tests\Service\Avaliador)
+ [x] Avaliar lance maior with data set "Crescente"
+ [x] Avaliar lance maior with data set "Decrescente"
+ [x] Avaliar lance maior with data set "Aleatorio"
+ [x] Avaliar lance menor with data set "Crescente"
+ [x] Avaliar lance menor with data set "Decrescente"
+ [x] Avaliar lance menor with data set "Aleatorio"
+ [x] Avaliar lance maiores with data set "Crescente"
+ [x] Avaliar lance maiores with data set "Decrescente"
+ [x] Avaliar lance maiores with data set "Aleatorio"
+ [x] Leilao vazio
+ [x] Leilao finalizado avaliar
+
