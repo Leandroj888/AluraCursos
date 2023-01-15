@@ -2,6 +2,11 @@
 https://www.php.net/manual/pt_BR/function.fopen.php `ok`
 https://stackoverflow.com/questions/7027902/does-echo-equal-fputs-stdout.
 https://dias.dev/2020-11-03-wraper-de-streams-php/
+https://www.php.net/manual/en/class.directory.php `ok`
+https://www.php.net/manual/en/spl.files.php `ok`
+https://www.php.net/manual/en/book.mbstring.php `ok`
+https://youtu.be/al47Lz_SWLc `ok`
+
 
 
 ## Stream Filtros
