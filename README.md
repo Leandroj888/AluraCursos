@@ -50,3 +50,27 @@ ssh -T git@github.com
 git config --global user.name "Your Name"
 
 git config --global user.email "youremail@yourdomain.com"
+
+# Extensões (https://www.youtube.com/watch?v=DFPvnxIgwKA)
+- code runner - Executa parte de um código selecionado
+- dotEnv - ajuda em sintax de arquivos .env
+- Code Spell Checker / Brasilian Portugues Code Spell Checker - corretor ortográfico inglês - ptbr
+- Portuguese (Brazil) Language Pack for Visual Studio - VS code ptbr
+- PHP Snippets from PHPStorm - vários atalhos de escrita do phpstorm (fore)
+- GitLens — Git supercharged - Mostra quem alterou a linha e a branch, acresenta funcionabilidades na área git
+- Composer - permite visualizar os pacotes disponíveis no composer
+- EditorConfig for VS Code - semelhante ao que tem no editor mas pode ser levado mais a fino para cada projeto / tipo de arquivo / arquivo especifico
+- Path Intellisense - auto completa nomes
+- Twig - sintax para trabalhar com twig (problemas com o autocompletar do html)
+- PHP Intelephense - Coisas de php autocomplete e tals
+- PHP Debug - Debugar xdebug
+- PHP DocBlocker - escrever documentações de @parm @return
+- PHP Sniffer - vasculhar erros que ferem as psr
+- PHP Getters & Setters - permite adicionar get e set rapidamente
+- PHPUnit - fazer testes unitários
+- PHPUnit Test Explorer - Permite visualizar todos os testes
+
+
+# Informações do sistema
+screenfetch
+
