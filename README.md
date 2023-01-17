@@ -74,3 +74,35 @@ git config --global user.email "youremail@yourdomain.com"
 # Informações do sistema
 screenfetch
 
+
+
+## Debug trace
+```php
+print_r(debug_backtrace());
+```
+```bash
+Array
+(
+    [0] => Array
+        (
+            [file] => /home/leandro/AluraCursos/8-PHP Exceptions: tratamento de erros/pilha.php
+            [line] => 8
+            [function] => funcao2
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => /home/leandro/AluraCursos/8-PHP Exceptions: tratamento de erros/pilha.php
+            [line] => 24
+            [function] => funcao1
+            [args] => Array
+                (
+                )
+
+        )
+
+)
