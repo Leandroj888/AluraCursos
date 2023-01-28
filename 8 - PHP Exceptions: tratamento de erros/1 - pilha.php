@@ -9,19 +9,37 @@ function funcao1()
         //$arrayFixo[3] = 'testes';
         funcao2();
     } 
-    catch (RuntimeException | DivisionByZeroError $e) { //multicatch
-
+    //catch (RuntimeException | DivisionByZeroError $e) { //multicatch
+    catch (Exception $e) {
+        echo $e->getMessage() . PHP_EOL;
+        echo $e->getLine() . PHP_EOL;
+        echo $e->getFile() . PHP_EOL;
+        echo $e->getTraceAsString() . PHP_EOL;
+        
+        throw new RuntimeException(
+            'Exceção foi tratada, mas pega ai',
+            $e->getCode(),
+            $e
+        );
+    }
+    catch (Error $e) {
         echo $e->getMessage() . PHP_EOL;
         echo $e->getLine() . PHP_EOL;
         echo $e->getFile() . PHP_EOL;
         echo $e->getTraceAsString() . PHP_EOL;
     }
+    catch (Throwable $qualquerCoisa) {
+        echo $qualquerCoisa->getMessage() . PHP_EOL;
+        echo $qualquerCoisa->getLine() . PHP_EOL;
+        echo $qualquerCoisa->getFile() . PHP_EOL;
+        echo $qualquerCoisa->getTraceAsString() . PHP_EOL;
+    }
 
     /*
     catch (RuntimeException) {
-        echo "RuntimeException - Aconteceu um erro na função 2 mas acusou na funcao 1" . PHP_EOL;
+        echo "RuntimeException - Aconteceu um erro na função 2 mas acusou na função 1" . PHP_EOL;
     } catch (DivisionByZeroError) {
-        echo "DivisionByZeroError - Aconteceu um erro na função 2 mas acusou na funcao 1" . PHP_EOL;
+        echo "DivisionByZeroError - Aconteceu um erro na função 2 mas acusou na função 1" . PHP_EOL;
     }
     */
     //$divisao = intdiv(5 , 0);
@@ -33,6 +51,10 @@ function funcao1()
 function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
+    
+    $exception = new BadFunctionCallException('Mensagem Personalizada BadFunctionCallException');
+    throw $exception; // lança a exceção
+    
     $divisao = intdiv(5 , 0);
     $arrayFixo = new SplFixedArray(2);
     $arrayFixo[3] = 'testes';

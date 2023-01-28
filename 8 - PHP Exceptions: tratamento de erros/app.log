@@ -1,0 +1,8 @@
+[25-Jan-2023 21:16:54 America/Sao_Paulo] PHP Warning:  Undefined variable $e in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php on line 11
+[25-Jan-2023 21:16:54 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php on line 11
+[25-Jan-2023 21:21:48 America/Sao_Paulo] PHP Warning:  Undefined variable $e in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php on line 11
+[25-Jan-2023 21:21:48 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php on line 11
+[25-Jan-2023 21:21:48 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "CONSTAN" in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php:30
+Stack trace:
+#0 {main}
+  thrown in /sda5/code/AluraCursos/8 - PHP Exceptions: tratamento de erros/5 - erros.php on line 30
