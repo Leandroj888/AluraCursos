@@ -91,4 +91,30 @@ class LeilaoDaoTest extends TestCase
     {
         self::$pdo->rollBack();
     }
+    
+    public function testAoAtualizarLeilaoStatusDeveSerAlterado()
+    {
+        //arrange
+        $leilao = new Leilao('Brasilia Amarela');
+        $leilaoDao = new LeilaoDao(self::$pdo);
+        $leilao = $leilaoDao->salva($leilao);
+        
+        //break aaa - Teste intermediário - Seria mais interessante fazer separado para seguir o modelo
+        $leiloes = $leilaoDao->recuperarNaoFinalizados();
+        self::assertCount(1, $leiloes);
+        self::assertSame('Brasilia Amarela', $leiloes[0]->recuperarDescricao());
+        self::assertFalse($leiloes[0]->estaFinalizado());
+        
+        
+        $leilao->finaliza();
+        
+        //act
+        $leilaoDao->atualiza($leilao);
+        
+        //assert
+        $leiloes = $leilaoDao->recuperarFinalizados();
+        self::assertCount(1, $leiloes);
+        self::assertSame('Brasilia Amarela', $leiloes[0]->recuperarDescricao());
+        self::assertTrue($leiloes[0]->estaFinalizado());
+    }
 }

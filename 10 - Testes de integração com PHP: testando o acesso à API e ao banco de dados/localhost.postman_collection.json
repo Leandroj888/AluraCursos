@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "d185e8dd-4f3b-4cee-bae0-f9d7c279d99f",
+		"name": "localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14585520"
+	},
+	"item": [
+		{
+			"name": "rest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//=======================================================\\\\",
+							"",
+							"pm.test(\"Código de status deve ser 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//=======================================================\\\\",
+							"",
+							"pm.test(\"Resposta deve estar em JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"//=======================================================\\\\",
+							"const leiloes = pm.response.json();",
+							"",
+							"pm.test('Resposta deve estar válido no formato de Leilões', function () {",
+							"    const schema = {",
+							"        required: ['descricao','estaFinalizado'],",
+							"        properties: {",
+							"            descricao: {",
+							"                type: \"string\",",
+							"            },",
+							"            estaFinalizado: {",
+							"                type: \"boolean\",",
+							"            }",
+							"        }",
+							"    };",
+							"",
+							"    leiloes.forEach(leilao => {",
+							"        pm.expect(tv4.validate(leilao, schema)).to.be.true;",
+							"        pm.expect(leilao.estaFinalizado).to.be.false;",
+							"    });",
+							"});",
+							"",
+							"//=======================================================\\\\",
+							"pm.test('Nenhum Leilão deve estar finalizado', function () {",
+							"    leiloes.forEach(leilao => pm.expect(leilao.estaFinalizado).to.be.false);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/rest.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"rest.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

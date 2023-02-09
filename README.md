@@ -79,6 +79,13 @@ screenfetch
 ## Debug trace
 ```php
 print_r(debug_backtrace());
+
+error_log("=============== Programmer Trace =================");
+$debugTrace = debug_backtrace();
+array_walk($debugTrace, function ($value, $key) {
+	error_log("#{$key} {$value['file']}({$value['line']}): {$value['function']}");
+});
+error_log("==================================================");
 ```
 ```bash
 Array
