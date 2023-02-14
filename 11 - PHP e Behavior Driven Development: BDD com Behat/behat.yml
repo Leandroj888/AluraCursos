@@ -1,0 +1,12 @@
+default :
+  suites :
+    unit :
+      contexts :
+        - FormacaoEmMemoria
+      filters :
+        tags : unit
+    integration :
+      contexts :
+        - FormacaoEmBanco
+      filters :
+        tags : integration

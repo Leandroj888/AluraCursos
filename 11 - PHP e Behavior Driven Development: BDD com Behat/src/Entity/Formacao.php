@@ -37,6 +37,9 @@ class Formacao
 
     public function setDescricao(string $descricao): void
     {
+        if (count(explode(" ", $descricao)) < 2) {
+            throw new \InvalidArgumentException('Descrição precisa ter pelo menos 2 palavras');
+        }
         $this->descricao = $descricao;
     }
 }

@@ -2,6 +2,8 @@
 
 ## Links
 https://cucumber.io/docs/gherkin/ `ok`
+https://www.php.net/assert `ok`
+https://docs.behat.org/en/latest/user_guide/organizing.html `ok`
 
 ## Comandos
 ```bash
@@ -48,7 +50,32 @@ php vendor/bin/doctrine orm:schema-tool:update --dump-sql
 php vendor/bin/doctrine orm:schema-tool:update --force
 ```
 
+### Criar comandos faltantes em um contexto especifico
+```bash
+php vendor/bin/behat --append-snippets --dry-run --snippets-for=FormacaoEmMemoria
+```
 
+### Executando cenários especificos
+Devem ser separados em behat.yml
+```yml
+default :
+  suites :
+    unit :
+      contexts :
+        - FormacaoEmMemoria
+      filters :
+        tags : unit
+    integration :
+      contexts :
+        - FormacaoEmBanco
+      filters :
+        tags : integration
+```
+
+
+```bash
+php vendor/bin/behat -s unit
+```
 # Alura Readme
 ## Introdução ao MVC com PHP
 
