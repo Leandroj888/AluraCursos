@@ -1,19 +1,9 @@
-# Leandro Readme
+# Links
 
-## Links
-
-## Comandos
+# Comandos
 ```bash
 composer install
-#php bin/doctrine orm:schema-tool:create
-#php bin/doctrine dbal:run-sql "INSERT INTO usuarios (email, senha) VALUES ('email@example.com', '\$argon2i\$v=19\$m=65536,t=4,p=1\$WHpBb1FzTDVpTmQubU55bA\$jtZiWSSbmw1Ru4tYEq1SzShrMu0ap2PjblRQRubNPgo');"
-php -S 0.0.0.0:8080 -t public
 ```
-
-## Login
-- Usuário  `email@example.com` 
-- Senha `123456`.
-
 
 # pdepend
 Ferramenta php que calcula nível de dependência de classes
