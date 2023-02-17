@@ -4,6 +4,7 @@
 https://cucumber.io/docs/gherkin/ `ok`
 https://www.php.net/assert `ok`
 https://docs.behat.org/en/latest/user_guide/organizing.html `ok`
+https://github.com/Behat/MinkExtension/blob/master/doc/index.rst `ok`
 
 ## Comandos
 ```bash
@@ -76,6 +77,20 @@ default :
 ```bash
 php vendor/bin/behat -s unit
 ```
+
+## Mink
+Ferramenta que simula uso do site [doc](https://github.com/Behat/MinkExtension/blob/master/doc/index.rst)
+
+    - Instalação via composer.json
+    - configuração em behat.yml
+        - e2e - end to end - inicio ao fim desde o login até o logout os testes
+
+sintax permitidas
+```bash
+php vendor/bin/behat -dl lang=pt
+```
+
+-------------------------------------------------------------
 # Alura Readme
 ## Introdução ao MVC com PHP
 

@@ -4,7 +4,7 @@
     <h1><?= $titulo; ?></h1>
 </div>
 
-<a href="/novo-formacao" class="btn btn-primary mb-2">Novo Formação</a>
+<a href="/nova-formacao" class="btn btn-primary mb-2">Nova Formação</a>
 
 <ul class="list-group">
     <?php foreach ($formacoes as $formacao): ?>
@@ -12,11 +12,11 @@
         <?= $formacao->getDescricao(); ?>
 
         <span>
-            <a href="/editar-formacao?id=<?= $formacao->getId(); ?>" class="btn btn-sm btn-info">
+            <a title="Editar <?= $formacao->getDescricao(); ?>" href="/editar-formacao?id=<?= $formacao->getId(); ?>" class="btn btn-sm btn-info">
                 Editar
             </a>
 
-            <a href="/excluir-formacao?id=<?= $formacao->getId(); ?>" class="btn btn-sm btn-danger">
+            <a title="Excluir <?= $formacao->getDescricao(); ?>"href="/excluir-formacao?id=<?= $formacao->getId(); ?>" class="btn btn-sm btn-danger">
                 Excluir
             </a>
         </span>
