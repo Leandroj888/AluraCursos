@@ -18,11 +18,13 @@ Habilitar no php.ini a `extension=ds.so` no meu caso fica em `/etc/php/8.1/php.i
 # Comandos
 ```bash
 composer update
+vendor/bin/phpunit
 
 #php -S 0.0.0.0:8080 -t public
 ```
 
 # Color PHPUNIT
+phpunit.xml
 ``` xml
 <phpunit
     colors="true">
@@ -43,3 +45,9 @@ Mais ifs e elses mais complexo é o método, mais é pior
 5. Coleção de primeira classe (Sempre que manipula a coleção ideal e extrair para classe especifica, ou para tipar um array)
 6. Apenas 1 "ponto" por instrução  (Operador de acesso ->) Lei de Demeter -  não falar com estranhos
 7. NUNCA abrevie (Nome muito grande / método fazendo muita coisa) (Acesso em muitos lugares)
+8. Mantenha suas classes (Max 50 linhas) e pacotes pequenos (máx 10 classes)
+9. Tenha no máximo 2 propriedades numa class (? porque)
+
+
+Object Calisthenics are programming exercises, formalized as a set of 9 rules invented
+by Jeff Bay in his book The Thought Works Anthology.

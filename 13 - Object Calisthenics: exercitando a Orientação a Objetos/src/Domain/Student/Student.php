@@ -8,10 +8,12 @@ use DateTimeInterface;
 
 class Student
 {
+    private WatchedVideos $watchedVideos;
+    /*
     private Email $email;
     private DateTimeInterface $birthDate;
     private WatchedVideos $watchedVideos;
-    private string $fullName;
+    private string $firstName;
     private string $lastName;
     public string $street;
     public string $number;
@@ -19,14 +21,25 @@ class Student
     public string $city;
     public string $state;
     public string $country;
+    */
+        
+    public function __construct(
+        private Email $email, 
+        private DateTimeInterface $birthDate, 
+        private FullName $fullName, 
+        private Andress $andress, 
+    ) {
+        $this->watchedVideos = new WatchedVideos();
+    }
 
-    public function __construct(Email $email, DateTimeInterface $birthDate, string $fullName, string $lastName, string $street, string $number, string $province, string $city, string $state, string $country)
+    /*
+    public function __construct(Email $email, DateTimeInterface $birthDate, string $firstName, string $lastName, string $street, string $number, string $province, string $city, string $state, string $country)
     {
         $this->watchedVideos = new WatchedVideos();
         //$this->setEmail($email);
         $this->email = $email;
         $this->birthDate = $birthDate;
-        $this->fullName = $fullName;
+        $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->street = $street;
         $this->number = $number;
@@ -35,10 +48,10 @@ class Student
         $this->state = $state;
         $this->country = $country;
     }
-
+*/
     public function fullName(): string
     {
-        return "{$this->fullName} {$this->lastName}";
+        return (string) $this->fullName;
     }
     /*
     private function setEmail(string $email)

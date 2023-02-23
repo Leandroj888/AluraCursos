@@ -1,0 +1,39 @@
+{
+    "name": "cviniciussdias/google-crawler",
+    "description": "A simple Crawler for getting Google results",
+    "keywords": ["google", "crawler", "search"],
+    "type": "library",
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.2",
+        "php-ds/php-ds": "^1.3",
+        "ext-dom": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "suggest": {
+        "ext-ds": "Allow IDE autocomplete for editing the component"
+    },
+    "scripts": {
+        "phpunit": "phpunit --coverage-clover=coverage.clover"
+    },
+    "autoload": {
+        "psr-4": {
+            "CViniciusSDias\\GoogleCrawler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CViniciusSDias\\GoogleCrawler\\Tests\\": "tests/"
+        }
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "CViniciusSDias",
+            "email": "carlosv775@gmail.com"
+        }
+    ]
+}
