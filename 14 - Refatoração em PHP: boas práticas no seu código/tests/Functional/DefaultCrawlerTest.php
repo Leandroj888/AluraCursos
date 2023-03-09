@@ -4,7 +4,9 @@ namespace CViniciusSDias\GoogleCrawler\Tests\Functional;
 use CViniciusSDias\GoogleCrawler\Crawler;
 use CViniciusSDias\GoogleCrawler\Exception\InvalidGoogleHtmlException;
 use CViniciusSDias\GoogleCrawler\Proxy\CommonProxy;
+use CViniciusSDias\GoogleCrawler\Proxy\CommonProxyAbstractFactory;
 use CViniciusSDias\GoogleCrawler\Proxy\KProxy;
+use CViniciusSDias\GoogleCrawler\Proxy\KProxyAbstractFactory;
 use CViniciusSDias\GoogleCrawler\SearchTerm;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
@@ -27,7 +29,7 @@ class DefaultCrawlerTest extends AbstractCrawlerTest
      */
     public function testSearchResultsWithCommonProxy(string $endpoint)
     {
-        $commonProxy = new CommonProxy($endpoint);
+        $commonProxy = new CommonProxyAbstractFactory($endpoint);
         $searchTerm = new SearchTerm('Test');
         $crawler = new Crawler($commonProxy);
         try {
@@ -51,7 +53,7 @@ class DefaultCrawlerTest extends AbstractCrawlerTest
     {
         $this->markTestSkipped('Implementation outdated');
         try {
-            $kProxy = new KProxy($serverNumber);
+            $kProxy = new KProxyAbstractFactory($serverNumber);
             $searchTerm = new SearchTerm('Test');
             $crawler = new Crawler($kProxy);
             $results = $crawler->getResults($searchTerm);

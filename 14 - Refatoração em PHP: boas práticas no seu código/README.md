@@ -1,5 +1,11 @@
 # Readme Leandro
 ## Link
+https://www.youtube.com/watch?v=XJCSQ2nWRrQ `ok`
+https://www.youtube.com/watch?v=1FdK8adSo4Y `ok`
+https://cursos.alura.com.br/novidades-do-php-7-4-arrow-functions-c130 `ok`
+https://wiki.c2.com/?DontUseExceptionsForFlowControl `ok`
+https://amzn.to/3m32rBC
+https://refactoring.guru/refactoring/
 
 ## Comandos
 ```bash
@@ -8,6 +14,30 @@ vendor/bin/phpunit
 
 #php -S 0.0.0.0:8080 -t public
 ```
+
+
+## Maybe
+permite usar valores nulos sem validar antes
+```bash
+composer require yitznewton/maybe-php
+
+# na class retorne Maybe 
+#monada
+```
+Before:
+
+```php
+$blogpost = $repository->get($blogpostId);
+echo $blogpost->teaser();  // oh noe! what if $blogpost is null?! :boom:
+```
+
+After:
+
+```php
+$blogpost = new \Yitznewton\Maybe\Maybe($repository->get($blogpostId));
+echo $blogpost->select(function ($bp) { $bp->teaser(); })->valueOr('No blogpost found');
+```
+
 
 
 # Google Crawler
