@@ -5,6 +5,11 @@ https://cursos.alura.com.br/extra/hipsterstech/praticas-de-orientacao-a-objetos-
 https://floating-point-gui.de/ `ok`
 https://refactoring.guru/pt-br/design-patterns/strategy `ok`
 https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility `ok`
+https://refactoring.guru/design-patterns/template-method `ok`
+https://refactoring.guru/design-patterns/state `ok`
+https://refactoring.guru/design-patterns/command `ok`
+https://refactoring.guru/design-patterns/observer `ok`
+https://refactoring.guru/design-patterns/iterator `ok`
 
 # Criar Namespace
 
@@ -26,6 +31,9 @@ executar o comando
 ```bash
 composer dump-autoload
 ```
+
+# Argv
+quando executado via linha de comando pegar os argumentos passados, ele é um array e o índice 0 é o nome do programa e os seguintes são os parâmetros parecido com shell script
 
 ## debugar
 
