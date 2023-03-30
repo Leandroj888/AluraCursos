@@ -2,6 +2,12 @@
 https://refactoring.guru/pt-br/design-patterns/adapter `ok`
 https://www.php.net/manual/pt_BR/book.simplexml.php `ok`
 https://refactoring.guru/pt-br/design-patterns/bridge `ok`
+https://refactoring.guru/design-patterns/decorator `ok`
+https://www.alura.com.br/artigos/trabalhando-com-arrays-em-php `ok`
+https://refactoring.guru/pt-br/design-patterns/composite `ok`
+https://refactoring.guru/pt-br/design-patterns/facade `ok`
+https://refactoring.guru/pt-br/design-patterns/proxy `ok`
+https://refactoring.guru/pt-br/design-patterns/flyweight `ok`
 
 
 # Criar Namespace
