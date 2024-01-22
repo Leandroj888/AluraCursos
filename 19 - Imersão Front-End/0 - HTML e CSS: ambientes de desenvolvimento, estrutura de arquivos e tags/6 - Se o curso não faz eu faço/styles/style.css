@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Krona One"; 
+    src: url("../fonts/KronaOne-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #000;
+    color: #F6F6F6
+}
+
+.impress {
+    color: #22D4FD
+}
+
+h1 {
+    font-family: "Krona One";
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem; /* 155.556% */
+    margin-bottom: 2.5rem;
+}
+
+h4 {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    margin-bottom: 5rem;
+    text-align: justify;
+}
+
+.profile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile__image {
+    width: 29.125rem;
+    height: 32.875rem;
+    display: block;
+    border-radius: 1rem;
+    filter: grayscale(100%);
+}
+
+.profile__border {
+    width: 29.125rem;
+    height: 32.875rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border: 3px solid #22D4FD;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    pointer-events: none; 
+    z-index: -1;
+}
+
+.text {
+    width: 37.0625rem;    
+    margin-right: 5rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__click {
+    cursor: pointer;
+    border-radius: 1rem;
+    border: 0px solid #22D4FD;
+    background: #22D4FD;   
+    display: flex;
+    width: 15.5rem;
+    height: 2.94rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0; 
+    transition: background-color 0.3s ease;
+}
+
+.btn__click:hover {
+    background-color: #506CE6;
+}
+
+.btn__text {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.25rem;
+}
+
+
+
+.profile__svg {
+    position: absolute;
+}
+
+.profile__star {
+    left: 0;
+    bottom: 0;
+    margin-left: 26rem;
+    margin-bottom: 6rem;
+}
+
+.profile__small-trace {
+    left: 0;
+    bottom: 0;
+    margin-left: 2rem;
+    margin-bottom: -4rem;
+}
+
+.profile__big-trace {
+    left: 0;
+    bottom: 0;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}

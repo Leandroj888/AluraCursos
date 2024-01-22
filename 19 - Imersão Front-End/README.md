@@ -14,7 +14,7 @@
 
 ### &#9745;📚 [Artigo | CSS: o que é, como usar no HTML e um Guia para iniciar](https://www.alura.com.br/artigos/css)
 
-### 🎙️ [Podcast | CSS: Cansei de Ser Simples – Hipsters #09](https://www.hipsters.tech/css-cansei-de-ser-simples-hipsters-09/)
+### &#9745;🎙️ [Podcast | CSS: Cansei de Ser Simples – Hipsters #09](https://www.hipsters.tech/css-cansei-de-ser-simples-hipsters-09/)
 
 ### &#9745;📚 [Artigo | CSS: seletores avançados que facilitam o desenvolvimento de aplicações](https://www.alura.com.br/artigos/css-seletores-avancados-aplicacoes-web)
 
@@ -63,3 +63,22 @@
 - [FLEXBOX FROGGY](https://flexboxfroggy.com/)
 
 - Tailwind/bootstrap Framework css
+
+- [FIGMA modelo](<https://www.figma.com/file/JqUaQac5mI60Q5QBhzr8LO/Portfolio---Curso-1-(Copy)?type=design&node-id=0%3A1&mode=design&t=Dy8NCIGmmn3T53Qb-1>)
+
+- Emmet (extensão para otimização de digitar código) -> para usar coloque ! + enter no vscode em um arquivo HTML
+    - **html**: Gera a estrutura básica de um documento HTML.
+    - **ul>li*5**: Cria uma lista não ordenada com cinco itens de lista.
+    - **div>h1+p**: Cria uma div contendo um cabeçalho (h1) seguido de um parágrafo (p).
+    - **input[type=text]+input[type=password]**: Cria dois campos de entrada, um para texto e outro para senha.
+    - 
+
+- [Roda de cores](https://color.adobe.com/pt/create/color-wheel) 
+- Outras Ferramentas de color
+    - [Coolors](https://coolors.co/)
+    - [Color Hunt](https://colorhunt.co/)
+    - [Color Tool](https://m2.material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=6002ee)
+
+# Extensões
+
+- Live Server - Visualizar edição em tempo real do HTML
