@@ -1,0 +1,154 @@
+/* css da aula */
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+}
+
+.sidebar__navigation{
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.sidebar__navigation .logo {
+    background: #121212;
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.sidebar__navigation .logo img {
+    width: 80px;
+}
+
+.sidebar nav ul{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+}
+/* ----------- */
+
+/* css desafio */
+.fa {
+    margin-right: 5px;
+}
+
+.elements {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.elements ul {
+    padding: 0 20px 10px 20px;
+}
+
+.library {
+    display: flex;
+    justify-content: space-between;
+}
+
+.library ul li {
+    padding: 10px 0;
+}
+
+.library a{
+    font-size: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #242424;
+    align-items: flex-start;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding-inline-start: 15px;
+}
+
+.playlist h1 {
+    padding-bottom: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.playlist h2 {
+    padding-bottom: 14px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.playlist button {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 9999px;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px;
+    border: 0px;
+    width: 113px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.cookies {
+    margin: 25px 20px;
+}
+
+.cookies__link {
+    color: #b3b3b3;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.language {
+    color: #fff;
+    cursor: pointer;   
+    text-decoration: none; 
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 9999px;
+    border: 1px solid #878787;
+    color: #fff;
+    cursor: pointer;    
+    padding: 8px;
+    width: 170px;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1;
+}
+/* ----------- */
