@@ -1,0 +1,5 @@
+@media screen and (max-width: 1015px) { /* Define a largura máxima da tela que será aplicado esse estilo */
+    .offer__list-item {
+        grid-template-columns: 1fr 1fr;
+    }
+}

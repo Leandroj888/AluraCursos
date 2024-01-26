@@ -135,11 +135,11 @@
 /* FIM SCROLL */
   
 .offer__list-item {
-    display: grid;
+    display: grid; /* Monta uma tabela de acordo com o espaço*/
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 16px;
-    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 1fr representa 1 colouna nesse caso são 5*/
+    grid-gap: 16px; /*modo antigo de definir espaçamento entre frações*/
+    gap: 16px; /*modo novo de definir espaçamento entre frações*/
     margin-bottom: 16px; 
 }
   
