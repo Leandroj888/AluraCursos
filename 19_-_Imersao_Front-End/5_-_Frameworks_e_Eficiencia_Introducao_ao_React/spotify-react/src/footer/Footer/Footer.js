@@ -1,8 +1,9 @@
 import React from "react";
+import MenuButton from "../../util/MenuButton/MenuButton";
 import "./Footer.css";
 
 const Footer = () => {
-    return(
+    return (
         <footer className="disclaimer-premium">
             <div className="text">
                 <p className="disclaimer-premium__title">Testar o Premium de graça</p>
@@ -11,9 +12,7 @@ const Footer = () => {
                     anúncios. Não precisa de cartão de crédito.
                 </p>
             </div>
-            <div className="button">
-                <button type="button">Inscreva-se grátis</button>
-            </div>
+            <MenuButton classButton="footer__button" text="Inscreva-se grátis" />
         </footer>
     );
 };
