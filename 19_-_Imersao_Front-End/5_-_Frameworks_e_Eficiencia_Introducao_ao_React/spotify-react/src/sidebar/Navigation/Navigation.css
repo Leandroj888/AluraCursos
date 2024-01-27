@@ -1,0 +1,24 @@
+.sidebar__navigation {
+    background-color: #121212;
+    border-radius: 8px;
+}
+
+.sidebar__navigation .logo {
+    background: #121212;
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.sidebar__navigation .logo img {
+    width: 80px;
+}
+
+.sidebar__navigation ul {
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+
+.sidebar__navigation ul li {
+    padding: 10px 0;
+}

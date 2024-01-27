@@ -16,7 +16,7 @@ npx é o executor do npm e permite ao invés de instalar todo npm já criar o pr
 
 ## subir aplicação
 
-- npm start no projeto
+- npm start spotify-imersao
 - json-server --watch api-artists/artists.json --port 3001
 
 ## jsx
@@ -60,4 +60,10 @@ function App() {
 };
 
 export default App;
+```
+
+## Concatenar String com váriavel 
+precisa usar aspas simples americana
+```jsx
+<button className={`menuButton ${props.classButton}`}>
 ```

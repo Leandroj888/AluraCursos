@@ -1,0 +1,12 @@
+.languages .languages__button {
+    font-size: 0.8rem;
+    margin: 8px;
+    padding: 8px;
+    color: white;
+    border: 1px solid #878787;
+    border-radius: 20px;
+    width: 170px;
+}
+.languages .languages__button .fa{
+    font-size: 0.8rem;
+}

@@ -1,0 +1,19 @@
+.menuButton {
+    display: flex;
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;    
+    align-items: center;
+    padding: 0;
+}
+
+.menuButton__image {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 300;
+}

@@ -1,6 +1,6 @@
 .main-container {
     max-width: 80vw;
-    height: 100vh;
+    height: calc(100vh - 1rem);
     margin-left: 320px;
     margin-right: 56px;
 }
