@@ -1,24 +1,24 @@
 .sidebar__navigation {
-    background-color: #121212;
-    border-radius: 8px;
+    background-color: var(--bg-container);
+    border-radius: 0.5rem;
 }
 
 .sidebar__navigation .logo {
-    background: #121212;
+    background: var(--bg-container);
     display: flex;
-    border-radius: 8px;
-    padding: 16px 0 0 16px;
+    border-radius: 0.5rem;
+    padding: 1rem 0 0 1rem;
 }
 
 .sidebar__navigation .logo img {
-    width: 80px;
+    width: 5rem;
 }
 
 .sidebar__navigation ul {
-    margin-top: 20px;
-    padding: 0 20px 10px 20px;
+    margin-top: 1.25rem;
+    padding: 0 1.25rem 0.625rem 1.25rem;
 }
 
 .sidebar__navigation ul li {
-    padding: 10px 0;
+    padding: 0.625rem 0;
 }

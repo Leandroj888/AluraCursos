@@ -1,9 +1,9 @@
 .menuButton {
     display: flex;
-    color: #b3b3b3;
+    color: var(--text-section);
     background-color: transparent;
     border: 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -13,7 +13,7 @@
 }
 
 .menuButton__image {
-    font-size: 20px;
-    margin-right: 10px;
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
     font-weight: 300;
 }

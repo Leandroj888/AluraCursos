@@ -4,8 +4,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, #ae2896, #509bf5);
-    padding: 15px 40px;
+    background: linear-gradient(to right, var(--bg-footer-1), var(--bg-footer-2));
+    padding: 0.938rem 2.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -13,22 +13,22 @@
    flex-shrink: 0;
 }
 .disclaimer-premium .disclaimer-premium__title {
-    color: #ffffff;
+    color: var(--text-light);
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
 }
 
 .disclaimer-premium .disclaimer-premium__subtitle {
-    color: #ffffff;
-    font-size: 14px;
+    color: var(--text-light);
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
 .footer__button {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 14px 30px;
-    border-radius: 40px;
+    background-color: var(--bg-light-button);
+    color: var(--text-dark);
+    padding: 0.875rem 1.875rem;
+    border-radius: 2.5rem;
 }

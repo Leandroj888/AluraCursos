@@ -1,14 +1,14 @@
 .library {
-    background-color: #121212;
-    border-radius: 8px;
+    background-color: var(--bg-container);
+    border-radius: 0.5rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 4px 8px;
-    color: #b3b3b3;
+    padding: 0.25rem 0.5rem;
+    color: var(--text-light);
     font-weight: 600;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
 }
 
 .library .library__content {
@@ -17,13 +17,13 @@
 }
 
 .library .library__button {
-    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
 }
 
 .library .library__button .fa {
-    padding-right: 8px;
+    padding-right: 0.5rem;
 }
 
 .library .library__content .fa-plus {
-    margin: 24px 10px;
+    margin: 1.5rem 0.625rem;
 }

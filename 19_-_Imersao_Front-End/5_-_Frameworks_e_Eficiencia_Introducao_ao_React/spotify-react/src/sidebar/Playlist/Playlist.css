@@ -3,14 +3,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 20px;
-    background-color: #242424;
-    color: #b3b3b3;
+    gap: 1.25rem;
+    background-color: var(--bg-section-dark);
+    color: var(--text-section);
     font-weight: 600;
-    font-size: 14px;
-    margin: 8px 0px;
-    padding: 16px 20px;
-    border-radius: 10px;
+    font-size: 0.875rem;
+    margin: 0.5rem 0px;
+    padding: 1rem 1rem;
+    border-radius: 0.625rem;
 }
 
 .section-playlist .section-playlist__content {
@@ -19,8 +19,8 @@
 }
 
 .section-playlist__content .text {
-    padding-bottom: 14px;
-    color: #ffffff;
+    padding-bottom: 0.875rem;
+    color: var(--text-light);
 }
 
 .section-playlist__content .title {
@@ -29,16 +29,16 @@
 
 .section-playlist__content .subtitle {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .section-playlist__content .section-playlist__button {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    font-size: 12px;
-    padding: 10px;
-    margin-top: 12px;
-    width: 113px;
+    background-color: var(--bg-light-button);
+    color: var(--text-dark);
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.625rem;
+    margin-top: 0.75rem;
+    width: 7.063rem;
     justify-content: center;
 }

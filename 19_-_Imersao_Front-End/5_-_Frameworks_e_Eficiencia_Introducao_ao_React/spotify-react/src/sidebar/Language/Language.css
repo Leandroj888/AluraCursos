@@ -1,11 +1,11 @@
 .languages .languages__button {
     font-size: 0.8rem;
-    margin: 8px;
-    padding: 8px;
-    color: white;
-    border: 1px solid #878787;
-    border-radius: 20px;
-    width: 170px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: var(--text-light);
+    border: 0.063rem solid var(--border-gray);
+    border-radius: 1.25rem;
+    width: 10.625rem;
 }
 .languages .languages__button .fa{
     font-size: 0.8rem;

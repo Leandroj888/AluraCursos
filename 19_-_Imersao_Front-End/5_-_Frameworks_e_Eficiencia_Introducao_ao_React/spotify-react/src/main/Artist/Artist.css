@@ -2,8 +2,8 @@
   
 .artist {
     --column-count: 5;
-    --grid-gap: 24px;
-    --min-container-width: 372px;
+    --grid-gap: 1.5rem;
+    --min-container-width: 23.25rem;
 }
   
 .hidden {
@@ -18,26 +18,26 @@
 }
   
 .artist-card {
-    background: #181818;
-    border-radius: 8px;
+    background: var(--bg-section-gray);
+    border-radius: 0.5rem;
     -ms-flex: 1;
     flex: 1;
     isolation: isolate;
-    padding: 16px;
+    padding: 1rem;
     position: relative;
     transition: background-color 0.3s ease;
     width: 100%;
 }
   
 .artist-card:hover {
-    background-color: #252525;
+    background-color: var(--bg-section-dark);
 }
   
 .card-img {
     padding-bottom: 100%;
     position: relative;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
   
 .artist-img {
@@ -52,11 +52,11 @@
 .card-text {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--text-light);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    min-height: 62px;
+    min-height: 3.875rem;
 }
   
 .card-text a {
@@ -67,14 +67,14 @@
   
 .artist-name {
     box-sizing: border-box;
-    margin-block: 0px;
-    font-size: 16px;
+    margin-block: 0;
+    font-size: 1rem;
     font-weight: 700;
-    padding-block-end: 8px;
+    padding-block-end: 0.5rem;
 }
   
 .artist-categorie {
-    color: #6a6a6a;
+    color: var(--text-gray);
     font-weight: 400;
     font-size: 0.875rem;
 }
@@ -85,27 +85,27 @@
   
 .play .fa-play {
     position: absolute;
-    right: 10px;
-    top: 120px;
-    padding: 18px;
-    background-color: #1db954;
+    right: 0.625rem;
+    top: 7.5rem;
+    padding: 1.125rem;
+    background-color: var(--bg-green-button);
     border-radius: 100%;
-    font-size: 14px;
+    font-size: 0.875rem;
     opacity: 0;
     transition: all ease 0.4s;
 }
   
 .artist-card:hover .play .fa-play {
     opacity: 1;
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
 }
   
 .play .fa-play:hover {
-    padding: 20px;
+    padding: 1.25rem;
     cursor: pointer;
 }
   
 #result-artist {
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
 }
 /* FIM CARD ARTISTA */

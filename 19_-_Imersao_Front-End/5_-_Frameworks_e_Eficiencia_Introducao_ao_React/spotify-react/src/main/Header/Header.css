@@ -3,10 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    margin: 10px;
-    border-radius: 8px;
-    background-color: #121212;
+    padding: 1rem;
+    margin: 0.625rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-container);
 }
 
 .header__navigation .navigation {
@@ -17,8 +17,8 @@
 
 .navigation .arrow {
     margin-right: 1.25rem;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background: var(--bg-icon);
     background-color: var(--bg-arrow-color) !important;
     border: none;
@@ -34,25 +34,25 @@
 .header__search {
     display: flex;
     align-items: center;
-    width: 364px;
-    height: 48px;
-    margin-left: 8px;
-    background-color: #242424;
-    border-radius: 500px;
-    border: 1px solid transparent;
+    width: 22.75rem;
+    height: 3rem;
+    margin-left: 0.5rem;
+    background-color: var(--bg-section-dark);
+    border-radius: 31.25rem;
+    border: 0.063rem solid transparent;
 }
 
 .header__search img {
-    width: 16px;
-    height: 16px;
-    margin-left: 10px;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.625rem;
 }
 
 .header__search input {
     background: transparent;
     border: none;
-    padding: 0px 100px 0 12px;
-    color: #fff;
+    padding: 0 6.25rem 0 0.75rem;
+    color: var(--text-light);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -65,18 +65,18 @@
 }
 
 .header__login .subscribe2 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    margin-right: 32px;
+    margin-right: 2rem;
 }
 
 .header__login .login2 {
-    font-size: 16px;
-    background-color: #efefef;
-    width: 100px;
-    color: #000;
+    font-size: 1rem;
+    background-color: var(--bg-light-button);
+    width: 6.25rem;
+    color: var(--text-dark);
     font-weight: 700;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     padding: 1rem;
     justify-content: center;
 }
