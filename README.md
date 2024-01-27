@@ -1,3 +1,6 @@
+# Alura
+[#ImersãoFrontEnd #Alura](https://github.com/Leandroj888/AluraCursos/tree/0af3b3d2a54b3995d6aeafe9929c9c8aaa7e62af/19_-_Imersao_Front-End)
+
 # Git comandos
 
 ## Clonar o diretório
@@ -34,24 +37,29 @@ git push
 # SSH
 
 ## Criar chave
+
 ssh-keygen -t ed25519 -C "email@servido.com.br"
 
 ## Pegar key
+
 cat ~/.ssh/id_ed25519.pub
 
 ## Adicionar ssh
+
 https://github.com/settings/keys -> new ssh key
 
 ## Testar conexão
+
 ssh -T git@github.com
 
-
 # Usuario Git
+
 git config --global user.name "Your Name"
 
 git config --global user.email "youremail@yourdomain.com"
 
 # Extensões (https://www.youtube.com/watch?v=DFPvnxIgwKA)
+
 - code runner - Executa parte de um código selecionado
 - dotEnv - ajuda em sintax de arquivos .env
 - Code Spell Checker / Brasilian Portugues Code Spell Checker - corretor ortográfico inglês - ptbr
@@ -70,13 +78,12 @@ git config --global user.email "youremail@yourdomain.com"
 - PHPUnit - fazer testes unitários
 - PHPUnit Test Explorer - Permite visualizar todos os testes
 
-
 # Informações do sistema
+
 screenfetch
 
-
-
 ## Debug trace
+
 ```php
 print_r(debug_backtrace());
 
@@ -87,6 +94,7 @@ array_walk($debugTrace, function ($value, $key) {
 });
 error_log("==================================================");
 ```
+
 ```bash
 Array
 (
@@ -113,3 +121,4 @@ Array
         )
 
 )
+```
