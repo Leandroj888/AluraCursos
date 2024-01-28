@@ -7,8 +7,8 @@ import Playlist from '../Playlist/Playlist';
 const Main = () => {
     return (
         <main>
+            <Sidebar/>
             <div className="main-container"> 
-                <Sidebar/>
                 <Header/>
                 <Playlist/>
             </div>

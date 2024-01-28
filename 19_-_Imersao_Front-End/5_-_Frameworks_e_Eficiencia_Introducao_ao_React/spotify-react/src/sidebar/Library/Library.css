@@ -8,7 +8,7 @@
     color: var(--text-light);
     font-weight: 600;
     font-size: 0.875rem;
-    margin-top: 0.625rem;
+    margin-top: var(--margin-elements);
 }
 
 .library .library__content {

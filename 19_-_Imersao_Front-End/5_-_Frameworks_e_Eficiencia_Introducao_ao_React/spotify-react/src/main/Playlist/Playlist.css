@@ -1,66 +1,10 @@
 /* PLAYLIST */
 .playlist-container {
-    height: 68vh;
-    padding-top: 1rem;
-    margin: 0.625rem;
     border-radius: 0.625rem;
     background-color: var(--bg-container);
+    min-width: var(--space-main-min);
 }
 
-.playlist {
-    margin: 1.5rem;
-}
-
-.playlist #greeting {
-    color: var(--text-light);
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.playlist .session {
-    color: var(--text-light);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-/* FIM PLAYLIST */
-
-/* SCROLL */
-.offer__scroll-container {
-    max-height: 43vh;
-    margin: 1.5rem;
-    overflow-y: auto;
-}
-
-.offer__scroll-container::-webkit-scrollbar {
-    width: 0.063rem;
-}
-
-.offer__scroll-container::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-/* FIM SCROLL */
-
-.offer__list-item {
-    display: grid;
-    /* Monta uma tabela de acordo com o espaço*/
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* 1fr representa 1 colouna nesse caso são 5*/
-    grid-gap: 1rem;
-    /*modo antigo de definir espaçamento entre frações*/
-    gap: 1rem;
-    /*modo novo de definir espaçamento entre frações*/
-    margin-bottom: 1rem;
-}
-
-.offer__list-item img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: auto;
-    width: 6.68rem;
-    transform: rotate(25deg) translate(18%, -2%);
+.playlist-elements {
+    padding: var(--margin-elements-inner);
 }

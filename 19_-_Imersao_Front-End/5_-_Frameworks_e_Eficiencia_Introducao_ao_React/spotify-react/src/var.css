@@ -4,6 +4,13 @@
     --font-dm-sans: "DM Sans", sans-serif;
 
     --column-count: 5;
+    
+    /* SPACE */
+    --space-sidebar: 18.75rem;
+    --space-main: calc(100vw - 18.75rem);
+    --space-main-min: 21.563rem;
+    --margin-elements: 0.625rem;
+    --margin-elements-inner: 1rem;
 
     /* COLORS */
     --bg-icon: #131313;
@@ -41,5 +48,5 @@
     --bg-card-12: rgb(216, 64, 0);
     --bg-card-13: rgb(186, 93, 7);
     --bg-card-14: rgb(0, 30, 80);
-    --bg-card-14: rgb(60, 30, 80);
+    --bg-card-15: rgb(60, 30, 80);
 }

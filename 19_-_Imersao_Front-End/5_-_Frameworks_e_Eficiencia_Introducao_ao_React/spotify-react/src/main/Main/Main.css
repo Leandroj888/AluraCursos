@@ -1,6 +1,10 @@
 .main-container {
-    max-width: 80vw;
+    width: var(--space-main);
     height: calc(100vh - 1rem);
-    margin-left: 20rem;
-    margin-right: 3.5rem;
+    margin-right: var(--margin-elements);
+    margin-top: var(--margin-elements);
+}
+
+main {
+    display: flex;
 }

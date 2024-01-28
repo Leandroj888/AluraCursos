@@ -3,16 +3,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin: 0.625rem;
+    margin-bottom: var(--margin-elements);
     border-radius: 0.5rem;
     background-color: var(--bg-container);
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    min-width: var(--space-main-min);
 }
 
 .header__navigation .navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: var(--margin-elements-inner);
 }
 
 .navigation .arrow {
@@ -40,6 +43,7 @@
     background-color: var(--bg-section-dark);
     border-radius: 31.25rem;
     border: 0.063rem solid transparent;
+    margin: var(--margin-elements-inner);
 }
 
 .header__search img {
@@ -62,15 +66,16 @@
 .header__login {
     display: flex;
     align-items: center;
+    margin: var(--margin-elements-inner);
 }
 
-.header__login .subscribe2 {
+.header__login .subscribe {
     font-size: 1rem;
     font-weight: 700;
     margin-right: 2rem;
 }
 
-.header__login .login2 {
+.header__login .login {
     font-size: 1rem;
     background-color: var(--bg-light-button);
     width: 6.25rem;

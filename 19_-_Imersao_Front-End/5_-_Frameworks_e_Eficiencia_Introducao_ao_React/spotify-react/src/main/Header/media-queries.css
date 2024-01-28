@@ -1,0 +1,27 @@
+
+@media screen and (max-width: 1138px) {
+    .header__navigation {
+        justify-content: flex-start
+    }
+    
+    .header__login {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        margin: 0;
+    }
+    
+    .header__login .login {
+        padding: 0.5rem;
+    }
+    
+    .subscribe {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 871px) {
+    .header__navigation .navigation {
+        display: none;
+    }
+}
