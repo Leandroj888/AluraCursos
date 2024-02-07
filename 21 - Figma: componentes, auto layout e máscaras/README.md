@@ -1,13 +1,13 @@
 # Artigos
-- 
-- 
+- [Componentes no Figma](https://www.alura.com.br/artigos/componentes-figma?_gl=1*1go4hyf*_ga*MTU2NTU2ODEzNi4xNjk2OTQ1NzQ3*_ga_1EPWSW3PCS*MTcwNzI1MzM0NS4xNi4xLjE3MDcyNTM4MjIuMC4wLjA.*_fplc*dTd4VW92NkM0YjdmYld6ME1GcmdPVHdTJTJGMjRJZHZBVzZQbGc1QmhFa2QlMkJMYmtJdDVTV1BGUzlnNlo5ZmtjcmpVRWslMkJVV0JyRUhjVGRMd3ZnbFgwQlc3MERyanZtRWFxMnhsS09mcUNHeVVMQUxBZjklMkJ2MSUyRkU5WmxZN0dRUSUzRCUzRA..)
+- [Auto layout no Figma](https://www.alura.com.br/artigos/auto-layout-figma?_gl=1*22poqs*_ga*MTU2NTU2ODEzNi4xNjk2OTQ1NzQ3*_ga_1EPWSW3PCS*MTcwNzI1MzM0NS4xNi4xLjE3MDcyNTM2MzAuMC4wLjA.*_fplc*dTd4VW92NkM0YjdmYld6ME1GcmdPVHdTJTJGMjRJZHZBVzZQbGc1QmhFa2QlMkJMYmtJdDVTV1BGUzlnNlo5ZmtjcmpVRWslMkJVV0JyRUhjVGRMd3ZnbFgwQlc3MERyanZtRWFxMnhsS09mcUNHeVVMQUxBZjklMkJ2MSUyRkU5WmxZN0dRUSUzRCUzRA..)
+
 
 # Vídeos
-- 
-
+-
 
 # PodCast
-- 
+- [atualizacoes-figma-2023](https://www.layerspontotech.com.br/2023/07/03/atualizacoes-figma-2023-layers-ponto-tech-138/)
 
 # Extensões
 - [Material Symbol](https://www.figma.com/community/plugin/1088610476491668236/material-symbols?searchSessionId=ls9np9lv-cog2c46khy4)
@@ -15,7 +15,6 @@
 - [Avatars](https://www.figma.com/community/plugin/739659977030056719)
 - [Iconify](https://www.figma.com/community/plugin/735098390272716381)
 - [Content Reel](https://www.figma.com/community/plugin/731627216655469013)
-
 
 - [Font Awesome](https://fontawesome.com/)
 - [Line Awesome](https://icons8.com/line-awesome)
