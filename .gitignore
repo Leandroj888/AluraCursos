@@ -1,0 +1,11 @@
+# Arquivos iniciando com "__consumer" e "__cluster"
+__consumer*
+__cluster*
+
+# Arquivos específicos do Kafka
+replication-offset-checkpoint
+recovery-point-offset-checkpoint
+log-start-offset-checkpoint
+cleaner-offset-checkpoint
+bootstrap.checkpoint
+.lock

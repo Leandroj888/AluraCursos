@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  kafka:
+    image: apache/kafka:4.1.1
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    volumes:
+      - ./data/kafka:/tmp/kraft-combined-logs
+      - ./data/config:/opt/kafka/config
