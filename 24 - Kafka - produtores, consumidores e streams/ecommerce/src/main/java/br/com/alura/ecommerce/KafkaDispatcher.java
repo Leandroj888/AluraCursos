@@ -7,19 +7,17 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.io.Closeable;
-import java.io.IOException;
 import java.util.Properties;
-import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
-public class KafkaDispatcher implements Closeable {
-    private final KafkaProducer<String, String> producer;
+public class KafkaDispatcher<T> implements Closeable {
+    private final KafkaProducer<String, T> producer;
 
     public KafkaDispatcher() {
         this.producer = new KafkaProducer<>(properties());
     }
 
-    public void send(String topic, String key, String value) {
+    public void send(String topic, String key, T value) {
         var record = new ProducerRecord<>(topic, key, value);
         try {
             producer.send(record, getCallback()).get();
@@ -42,7 +40,7 @@ public class KafkaDispatcher implements Closeable {
         Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, GsonSerializer.class.getName());
         return props;
     }
 

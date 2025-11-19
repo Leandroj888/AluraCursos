@@ -91,3 +91,15 @@ docker exec -it kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server
 ''' bash
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --alter --bootstrap-server localhost:9092 --topic ECOMMERCE_NEW_ORDER --partitions 3
 '''
+
+
+
+
+
+# 04-Serialização customizada
+
+Editar pasta padrão para salvar em server.properties alterar log.dirs, no caso do docker como o tmp foi mapeado para a maquina host não existe um problema, mas em servidores reais precisa mudar.
+
+* Log não é os log de sistema mas sim os registros!
+
+
