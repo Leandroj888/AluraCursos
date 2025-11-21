@@ -6,6 +6,6 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
-    volumes:
-      - ./data/kafka:/tmp/kraft-combined-logs
-      - ./data/config:/opt/kafka/config
+    #volumes:
+      #- ./data/kafka:/tmp/kraft-combined-logs
+      #- ./data/config:/opt/kafka/config
