@@ -1,5 +1,6 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.dispacher.KafkaDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -13,13 +14,13 @@ import java.util.UUID;
 public class NewOrderServlet extends HttpServlet {
 
     private final KafkaDispatcher<Order> orderDispatcher = new KafkaDispatcher<>();
-    private final KafkaDispatcher<Email> emailDispatcher = new KafkaDispatcher<>();
+    //private final KafkaDispatcher<Email> emailDispatcher = new KafkaDispatcher<>();
 
     @Override
     public void destroy() {
         super.destroy();
         orderDispatcher.close();
-        emailDispatcher.close();
+        //emailDispatcher.close();
     }
 
     @Override
@@ -30,9 +31,10 @@ public class NewOrderServlet extends HttpServlet {
             var orderId = UUID.randomUUID().toString();
             var order = new Order(orderId, amount, email);
             orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, order, new CorrelationId(NewOrderServlet.class.getSimpleName()));
-            var body = "Thank you for your order! We are processing your order!";
-            var emailObject = new Email(email,  body);
-            emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, emailObject, new CorrelationId(NewOrderServlet.class.getSimpleName()));
+
+            //var body = "Thank you for your order! We are processing your order!";
+            //var emailObject = new Email(email,  body);
+            //emailDispatcher.send("ECOMMERCE_SEND_EMAIL", email, emailObject, new CorrelationId(NewOrderServlet.class.getSimpleName()));
 
             System.out.println("New Order send Successfully.");
             resp.getWriter().println("New Order send Successfully.");

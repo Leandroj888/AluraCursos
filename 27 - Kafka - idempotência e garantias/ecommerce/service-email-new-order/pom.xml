@@ -19,5 +19,5 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service-reading-report</artifactId>
+    <artifactId>service-email-new-order</artifactId>
 </project>
