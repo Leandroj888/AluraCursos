@@ -147,3 +147,61 @@ values
     '$2a$12$qy9xk08E9lYunsUSNqB2uuudY0Lm5duq6DjMEhggCXUBaaujjfZNi' # 123456
   );
 ```
+
+# 4. JSON Web Token
+
+[libs] (https://www.jwt.io/libraries?programming_language=java)
+
+![alt text](image-1.png)
+
+``` yml 
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET}:12345678 # Tá entre chave busca como váriavel de ambiente | depois dos : seria a default
+```
+
+# 5. Controle de Acesso
+
+![alt text](image-2.png)
+Filter - Chamado antes de chamar o servlet para fazer validações
+
+Handler Interceptor - Passou pelo filter e entrou no servlet está no caminho para o controller
+
+Filter precisam usar o @Component, algo genérico mas precisa existir, precisamos implementar o  jakarta.servlet.Filter ou extender a org.springframework.web.filter.OncePerRequestFilter para usar filtro com spring
+
+OncePerRequestFilter - executa uma unica vez o método doFilterInternal
+
+filterChain- cadeia de filtros filterChain.dofilter(request, response);
+
+## Permissão por perfil
+``` java
+@Bean
+public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    return http.csrf().disable()
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and().authorizeHttpRequests()
+        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+        .requestMatchers(HttpMethod.DELETE, "/medicos").hasRole("ADMIN")
+        .requestMatchers(HttpMethod.DELETE, "/pacientes").hasRole("ADMIN")
+        .anyRequest().authenticated()
+        .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+        .build();
+}
+``` 
+
+
+ou adicionar a seguinte anotação na classe Securityconfigurations do projeto
+``` java
+@EnableMethodSecurity(securedEnabled = true)
+```
+
+e usar assim
+``` java
+@GetMapping("/{id}")
+@Secured("ROLE_ADMIN")
+public ResponseEntity detalhar(@PathVariable Long id) {
+    var medico = repository.getReferenceById(id);
+    return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
+}
+```
