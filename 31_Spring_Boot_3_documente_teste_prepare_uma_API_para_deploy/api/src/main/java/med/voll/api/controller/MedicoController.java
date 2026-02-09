@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.voll.api.domain.medico.*;
@@ -13,13 +14,14 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     @Autowired
     private MedicoRepository repository;
 
     @PostMapping
-    @Transactional //Abre a transação pois terá escrita
+    @Transactional //Abre a transação, pois terá escrita
     public ResponseEntity save(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) { // Essa anotação faz o Spring alimentar essa variável com o corpo da requisição
         var registro = repository.save(new Medico(dados));
 

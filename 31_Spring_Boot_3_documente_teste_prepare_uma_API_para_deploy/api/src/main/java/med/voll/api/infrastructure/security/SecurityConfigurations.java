@@ -29,8 +29,10 @@ public class SecurityConfigurations {
         http.authorizeHttpRequests(
                 (authorize) -> authorize
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        .requestMatchers( "/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
+                        .requestMatchers( "/login").permitAll()
                         .anyRequest().authenticated()
-        ); // Obriga a validação de todos tokens porém para login permite sem autentificação
+        ); // Obriga a validação de todos os ‘tokens’, porém para ‘login’ permite sem autentificação
         http.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class); // Muda a ordem de filtro do spring, defini primeiro a classe dos sistema e depois do spring
         return http.build();
     }

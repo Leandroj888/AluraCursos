@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL} # Busca por váriavel de ambiente ou parâmetro
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+  jpa:
+    show-sql: false # Mostar o Sql executado pelo Hibernate
+    properties:
+      hibernate:
+        format_sql: false # Formata o Sql mostrado
+
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: OFF # Permite visualizar os parâmetros da query (não usar em produção)

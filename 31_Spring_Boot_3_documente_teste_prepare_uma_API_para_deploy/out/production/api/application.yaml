@@ -1,0 +1,33 @@
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:f9G7v3KpQw2Lz8RnXs5VbYtHqMdCj6Fw} # Tá entre chave busca como váriavel de ambiente
+
+spring:
+  application:
+    name: api
+  datasource:
+    url: jdbc:mysql://localhost/vollmed_api
+    username: app_user
+    password: app_pass
+
+  data:
+    web:
+      pageable:
+        page-parameter: page # Define o nome para o parâmetro da url
+        size-parameter: size # Define o nome para o parâmetro da url
+        default-page-size: 10 # Define o total de registros por página (default 20)
+      sort:
+        sort-parameter: sort # Define o nome para o parâmetro da url
+  jpa:
+    show-sql: true # Mostar o Sql executado pelo Hibernate
+    properties:
+      hibernate:
+        format_sql: true # Formata o Sql mostrado
+  web:
+    error:
+      include-stacktrace: never # Remove o stacktrace dos erros retornados nas requisições
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE # Permite visualizar os parâmetros da query (não usar em produção)
