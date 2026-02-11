@@ -19,6 +19,12 @@ services:
       - go
       - run
       - main.go
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=root
+      - DB_PORT=5432
     volumes:
       - ./:/app
     working_dir: /app
