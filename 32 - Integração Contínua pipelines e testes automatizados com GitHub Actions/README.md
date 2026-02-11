@@ -42,3 +42,14 @@ CI - Continuos Integration
 - Alternativas
     - Jenkins
     - TravisCI 
+
+``` bash
+git branch -c pull_request
+git checkout pull_request
+```
+
+ou 
+
+``` bash
+git switch -c pull_request
+```

@@ -1,7 +1,7 @@
 # This workflow will build a golang project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
 
-name: Go
+name: Integração Contínua
 
 
 on:
@@ -40,7 +40,7 @@ jobs:
       run: docker compose up -d postgres
 
     - name: Lint
-      run: docker run --rm -it -v "${CURDIR}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
+      run: docker run --rm -it -v "${pwd}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
 
     - name: Test
       run: go test -v main_test.go
