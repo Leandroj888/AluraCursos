@@ -34,7 +34,11 @@ jobs:
       run: docker compose up -d postgres
 
     - name: Lint
-      run: docker run --rm -it -v "${pwd}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
+      uses: golangci/golangci-lint-action@v6
+      with:
+        working-directory: "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial"
+        args: controllers/ database/ models/ routes/
+      #run: docker run --rm -it -v "${pwd}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
 
     - name: Test
       run: go test -v main_test.go
