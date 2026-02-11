@@ -7,14 +7,8 @@ name: Integração Contínua
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial/**"
-      - "!**/*.md"
   pull_request:
     branches: [ "main" ]
-    paths:
-      - "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial/**"
-      - "!**/*.md"
 
 jobs:
 
