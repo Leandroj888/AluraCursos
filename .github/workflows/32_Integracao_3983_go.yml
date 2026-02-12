@@ -1,20 +1,14 @@
 # This workflow will build a golang project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
 
-name: Go
+name: Integração Contínua
 
 
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial/**"
-      - "!**/*.md"
   pull_request:
     branches: [ "main" ]
-    paths:
-      - "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial/**"
-      - "!**/*.md"
 
 jobs:
 
@@ -22,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial"
+        working-directory: "32_Integracao_Continua_pipelines_e_testes_automatizados_com_GitHub_Actions/3983-integracao-continua-projeto_inicial"
 
     steps:
     - uses: actions/checkout@v4
@@ -33,14 +27,27 @@ jobs:
         go-version: '1.22'
         cache: true
         cache-dependency-path: |
-          32 - Integração Contínua pipelines e testes automatizados com GitHub Actions/3983-integracao-continua-projeto_inicial/go.sum
+          32_Integracao_Continua_pipelines_e_testes_automatizados_com_GitHub_Actions/3983-integracao-continua-projeto_inicial/go.sum
 
 
     - name: Inicia Banco
       run: docker compose up -d postgres
 
+    - name: Esperando pelo Postgres
+      run: |
+        for i in {1..30}; do
+          docker compose exec -T postgres pg_isready -U ${{secrets.DB_USER}} -d ${{secrets.DB_NAME}} && exit 0
+          sleep 2
+        done
+        docker compose logs postgres
+        exit 1
+
     - name: Lint
-      run: docker run --rm -it -v "${CURDIR}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
+      uses: golangci/golangci-lint-action@v6
+      with:
+        working-directory: "32_Integracao_Continua_pipelines_e_testes_automatizados_com_GitHub_Actions/3983-integracao-continua-projeto_inicial"
+        args: ./controllers/ ./database/ ./models/ ./routes/
+      #run: docker run --rm -it -v "${pwd}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
 
     - name: Test
-      run: go test -v main_test.go
+      run: DB_HOST=${{secrets.DB_HOST}} DB_PASSWORD=${{secrets.DB_PASSWORD}} DB_USER=${{secrets.DB_USER}} DB_NAME=${{secrets.DB_NAME}} DB_PORT=${{secrets.DB_PORT}} go test -v main_test.go
