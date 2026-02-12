@@ -79,5 +79,5 @@ Builda e salva o compilado em uma pasta do projeto
       uses: actions/upload-artifact@v4
       with:
         name: projeto_compilado
-        path: 32_Integracao_Continua_pipelines_e_testes_automatizados_com_GitHub_Actions/3983-integracao-continua-projeto_inicial/dist/app
+        path: main
 ```
