@@ -33,10 +33,10 @@ jobs:
     - name: Inicia Banco
       run: docker compose up -d postgres
 
-    - name: Wait for Postgres
+    - name: Esperando pelo Postgres
       run: |
         for i in {1..30}; do
-          docker compose exec -T postgres pg_isready -U root -d root && exit 0
+          docker compose exec -T postgres pg_isready -U ${{secrets.DB_USER}} -d ${{secrets.DB_NAME}} && exit 0
           sleep 2
         done
         docker compose logs postgres
@@ -49,10 +49,5 @@ jobs:
         args: ./controllers/ ./database/ ./models/ ./routes/
       #run: docker run --rm -it -v "${pwd}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
 
-    #- name: Test
-    #  run: DB_HOST=${{secrets.DB_HOST}} DB_PASSWORD=${{secrets.DB_PASSWORD}} DB_USER=${{secrets.DB_USER}} DB_NAME=${{secrets.DB_NAME}} DB_PORT=${{secrets.DB_PORT}} go test -v main_test.go
-
     - name: Test
-      run: |
-        DB_HOST=127.0.0.1 DB_PORT=5432 DB_USER=root DB_PASSWORD=root DB_NAME=root \
-        go test -v main_test.go
+      run: DB_HOST=${{secrets.DB_HOST}} DB_PASSWORD=${{secrets.DB_PASSWORD}} DB_USER=${{secrets.DB_USER}} DB_NAME=${{secrets.DB_NAME}} DB_PORT=${{secrets.DB_PORT}} go test -v main_test.go
