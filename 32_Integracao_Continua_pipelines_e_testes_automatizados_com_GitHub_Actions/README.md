@@ -66,3 +66,18 @@ Depois definir no yaml usando ${{secrets.NAME}}
     - name: Test
       run: DB_HOST=${{secrets.DB_HOST}} DB_PASSWORD=${{secrets.DB_PASSWORD}} DB_USER=${{secrets.DB_USER}} DB_NAME=${{secrets.DB_NAME}} DB_PORT=${{secrets.DB_PORT}} go test -v main_test.go
 ```
+
+# 5 Geração de artefato
+
+Builda e salva o compilado em uma pasta do projeto
+
+``` yaml
+    - name: Build
+      run: go build main.go
+
+    - name: Projeto compilado
+      uses: actions/upload-artifact@v4
+      with:
+        name: projeto_compilado
+        path: 32_Integracao_Continua_pipelines_e_testes_automatizados_com_GitHub_Actions/3983-integracao-continua-projeto_inicial/dist/app
+```
