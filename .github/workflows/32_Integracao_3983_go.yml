@@ -33,6 +33,13 @@ jobs:
     - name: Inicia Banco
       run: docker compose up -d postgres
 
+    - name: Wait for Postgres
+      run: |
+        for i in {1..10}; do
+          docker compose exec postgres pg_isready -U root && break
+          sleep 3
+        done
+
     - name: Lint
       uses: golangci/golangci-lint-action@v6
       with:
