@@ -53,3 +53,6 @@ ou
 ``` bash
 git switch -c pull_request
 ```
+
+# 4 Protegendo Segredos
+
