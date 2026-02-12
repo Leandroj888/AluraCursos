@@ -56,3 +56,13 @@ git switch -c pull_request
 
 # 4 Protegendo Segredos
 
+- Usamos o Secrets de GitHub Actions
+
+GitHub -> Project -> Settings -> Secrets And Variable -> Actions -> Repository Secrets
+
+Depois definir no yaml usando ${{secrets.NAME}}
+
+``` yaml
+    - name: Test
+      run: DB_HOST=${{secrets.DB_HOST}} DB_PASSWORD=${{secrets.DB_PASSWORD}} DB_USER=${{secrets.DB_USER}} DB_NAME=${{secrets.DB_NAME}} DB_PORT=${{secrets.DB_PORT}} go test -v main_test.go
+```
