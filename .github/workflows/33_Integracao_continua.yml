@@ -26,10 +26,10 @@ jobs:
         go-version: ${{ matrix.go_version }}
       
     - name: Build-DB
-      run: docker compose build
+      run: docker compose -f docker-compose.yml build
       
     - name: Create-DB
-      run: docker compose up -d
+      run: docker compose -f docker-compose.yml up -d
 
     - name: Wait-DB
       run: |
