@@ -9,7 +9,7 @@ on:
 jobs:
 
   test_33:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         working-directory: "33_Integracao_Continua_Pipeline_Docker_no_Github_Actions"
@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
+        os: ['ubuntu-latest', 'ubuntu-18.04']
     steps:
     - uses: actions/checkout@v3
 
