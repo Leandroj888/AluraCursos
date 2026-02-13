@@ -1,0 +1,52 @@
+name: Go
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+jobs:
+
+  test_33:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "33_Integracao_Continua_Pipeline_Docker_no_Github_Actions"
+
+    strategy:
+      matrix:
+        go_version: ['1.18', '1.17', '>=1.18']
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ matrix.go_version }}
+      
+    - name: Build-DB
+      run: docker compose build
+      
+    - name: Create-DB
+      run: docker compose up -d
+
+    - name: Test
+      run: go test -v main_test.go 
+      
+  
+  build_33:
+    needs: test_33
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        working-directory: "33_Integracao_Continua_Pipeline_Docker_no_Github_Actions"
+        
+    strategy:
+      matrix:
+        os: ['ubuntu-latest', 'ubuntu-18.04']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: go build -v main.go
