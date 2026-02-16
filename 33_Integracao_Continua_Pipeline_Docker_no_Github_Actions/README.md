@@ -7,7 +7,10 @@ name: build
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ['ubuntu-latest', 'ubuntu-18.04']
+        os: ['ubuntu-latest', 'ubuntu-22.04']
 ```
 
 # 2 Preparando o conatainer
+
+Imagens de SO disponiveis para o GitHub Actions
+https://github.com/actions/runner-images
