@@ -10,6 +10,12 @@ jobs:
 
   test_33:
     runs-on: ${{ matrix.os }}
+    env:
+      HOST: localhost 
+      PORT: 5432
+      ENV USER: root 
+      PASSWORD: root 
+      DBNAME: root
     defaults:
       run:
         working-directory: "33_Integracao_Continua_Pipeline_Docker_no_Github_Actions"
