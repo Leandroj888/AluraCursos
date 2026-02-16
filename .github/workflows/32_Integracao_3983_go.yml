@@ -3,10 +3,6 @@
 
 name: Integração Contínua
 
-env:
-  ENABLE_BUILD: false
-
-
 on:
   push:
     branches: [ "main" ]
@@ -16,8 +12,8 @@ on:
 jobs:
 
   ci:
+    if: false
     runs-on: ubuntu-latest
-    if: env.ENABLE_BUILD == 'true'
     
     defaults:
       run:
