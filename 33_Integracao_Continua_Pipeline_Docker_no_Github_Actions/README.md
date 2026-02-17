@@ -50,7 +50,23 @@ Criamos um repasse para outra rotina
 ``` yml
   docker:
     needs: build_33
-    uses: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions/.github/workflows/Docker.yml
+    uses: ./33_Docker.yml
 ```
 
 Editamos esse Docker.yml dentro do próprio github para acessar o marktplace
+É necessário colocar todos os arquivos de rotina no .github\workflows na raiz do repositório, caso contrário o sistema pode acabar não identificando os arquivos
+
+# 4 Segredos e Chaves
+
+secrets: inherit - deve ser usado no yaml principal para poder passar os screts para os outros arquivos
+``` yml
+  docker:
+    needs: build_33
+    uses: ./33_Docker.yml
+    secrets: inherit
+```
+
+# 5 Artefatos
+
+É uma forma de levar informações de um ambiente para outro nas pipes
+
