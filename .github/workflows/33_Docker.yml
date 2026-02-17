@@ -17,3 +17,12 @@ jobs:
         with: 
           username: ${{secrets.DOCKER_LOGIN_USER}}
           password: ${{secrets.DOCKER_LOGIN_PASSWORD}}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v6.19.2
+        with:
+          context: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions
+          file: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions/Dockerfile
+          push: true
+          # nome do usuario/nome_imagem:versao (no caso o git pega o nome da branch)
+          tags: leandrojunges/aluracursos_33_go_ci:${{github.ref_name}}
