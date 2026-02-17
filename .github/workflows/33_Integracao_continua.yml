@@ -74,7 +74,7 @@ jobs:
         # Artifact name
         name: API_GO_33
         # A file, directory or wildcard pattern that describes what to upload
-        path: main
+        path: 33_Integracao_Continua_Pipeline_Docker_no_Github_Actions/main
 
   docker:
     needs: build_33
