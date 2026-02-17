@@ -69,4 +69,4 @@ jobs:
 
   docker:
     needs: build_33
-    uses: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions/.github/workflows/Docker.yml
+    uses: ./.github/workflows/33_Docker.yml
