@@ -46,3 +46,11 @@ docker build .
 
 # 3 Container e CI
 
+Criamos um repasse para outra rotina
+``` yml
+  docker:
+    needs: build_33
+    uses: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions/.github/workflows/Docker.yml
+```
+
+Editamos esse Docker.yml dentro do próprio github para acessar o marktplace
