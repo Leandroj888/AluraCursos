@@ -70,3 +70,4 @@ jobs:
   docker:
     needs: build_33
     uses: ./.github/workflows/33_Docker.yml
+    secrets: inherit
