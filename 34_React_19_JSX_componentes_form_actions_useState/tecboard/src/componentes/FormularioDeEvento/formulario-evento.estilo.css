@@ -1,0 +1,21 @@
+
+.formulario-evento {
+  background-color: #212121;
+  border-radius: 16px;
+  padding: 32px 28px;
+  margin: 64px auto;
+  width: 384px;
+  max-width: 90%;
+  color: #ffffff;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.acoes {
+  text-align: center;
+  margin-top: 32px;
+}

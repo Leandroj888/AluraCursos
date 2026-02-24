@@ -70,3 +70,17 @@ secrets: inherit - deve ser usado no yaml principal para poder passar os screts 
 
 É uma forma de levar informações de um ambiente para outro nas pipes
 
+## Para saber mais: 2 artefatos iguais
+
+Sempre que salvamos um artefato, um arquivo é criado no Github, porém não podemos ter dois arquivos com o mesmo nome, igual não podemos ter 2 arquivos com o mesmo nome no nosso computador.
+
+Porém, se tivermos duas ou mais rotinas, ou uma única rotina com mais de um ambiente sendo executado, como no caso das estratégias de matrizes, fazendo a criação de um artefato, podemos encontrar um erro, onde o github actions não consegue fazer salvar o artefato que foi criado por último, interrompendo a execução.
+
+Então, sempre que você for gerar um artefato, tome cuidado para verificar se não tem algum outro artefato com o mesmo nome, e se você não está executando alguma estratégia de múltiplos ambientes durante a geração do artefato.
+
+
+
+
+
+Tarciso
+
