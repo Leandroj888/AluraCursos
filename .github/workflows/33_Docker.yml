@@ -18,6 +18,12 @@ jobs:
           username: ${{secrets.DOCKER_LOGIN_USER}}
           password: ${{secrets.DOCKER_LOGIN_PASSWORD}}
 
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v7.0.0
+        with:
+          name: API_GO_33
+          path: ./33_Integracao_Continua_Pipeline_Docker_no_Github_Actions
+        
       - name: Build and push Docker images
         uses: docker/build-push-action@v6.19.2
         with:
@@ -26,3 +32,4 @@ jobs:
           push: true
           # nome do usuario/nome_imagem:versao (no caso o git pega o nome da branch)
           tags: leandrojunges/aluracursos_33_go_ci:${{github.ref_name}}
+
