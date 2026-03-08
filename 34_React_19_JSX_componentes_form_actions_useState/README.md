@@ -82,3 +82,6 @@ npm run build
 ```
 
 Compilou para a pasta dist
+
+
+para publicar dá para usar a [Vercel](https://vercel.com/)
