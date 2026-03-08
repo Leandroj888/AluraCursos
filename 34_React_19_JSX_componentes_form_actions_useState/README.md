@@ -63,3 +63,22 @@ Sempre use key em listas para otimizar a atualização
 
 
 # 4 Submentendo o Formulário
+
+React Compiler
+useState -> Hook do React
+
+
+Consultar cep gratuitamente 
+
+viacep.com.br/ws/01001000/json/
+
+
+# 5 Finalizand o projeto
+
+
+Build
+``` bash
+npm run build
+```
+
+Compilou para a pasta dist

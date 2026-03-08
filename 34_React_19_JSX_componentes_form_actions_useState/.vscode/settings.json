@@ -1,3 +1,24 @@
 {
-    "editor.scrollBeyondLastColumn": 2
+    "editor.scrollBeyondLastColumn": 2,
+    "chat.agent.enabled": false,
+    "chat.agent.codeBlockProgress": false,
+    "eslint.useFlatConfig": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "eslint.workingDirectories": [
+        {
+            "directory": "tecboard",
+            "changeProcessCWD": true
+        }
+    ],
+    "javascript.suggest.autoImports": true,
+    "javascript.suggestionActions.enabled": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.addMissingImports": "explicit"
+    }
 }

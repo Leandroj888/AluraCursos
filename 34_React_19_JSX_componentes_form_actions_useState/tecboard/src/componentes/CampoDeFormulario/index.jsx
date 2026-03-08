@@ -8,7 +8,7 @@ export function CampoDeFormulario({label, tipo, id, placeholder}) {
   return (
     <fieldset className="campo-form">
       <Label htmlFor={id}>{label}</Label>
-      <CampoDeEntrada type={tipo} id={id} placeholder={placeholder}/>
+      <CampoDeEntrada type={tipo} id={id} name={id} placeholder={placeholder}/>
     </fieldset>
   )
 }
