@@ -1,6 +1,22 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "EcomartApplication",
+            "request": "launch",
+            "mainClass": "br.com.alura.ecomart.EcomartApplication",
+            "projectName": ""
+        },
+        {
+            "name": "Java: Ecomart",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "br.com.alura.ecomart.EcomartApplication",
+            "projectName": "br.com.alura-ecomart",
+            "cwd": "${workspaceFolder}/35_Spring_AI_integre_uma_aplicacao_Spring_com_a_OpenAI/ecomart",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Listen for Xdebug",
             "type": "php",
             "request": "launch",
@@ -20,7 +36,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -33,7 +49,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -42,10 +58,20 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/leandro/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EcomartApplication<br.com.alura-ecomart>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.alura.ecomart.EcomartApplication",
+            "projectName": "br.com.alura-ecomart",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ],
     "compounds": [

@@ -29,5 +29,20 @@
         "editor.defaultFormatter": "wongjn.php-sniffer"
     },
     "commentTranslate.source": "Google",
-    "commentTranslate.multiLineMerge": false
+    "commentTranslate.multiLineMerge": false,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "/home/leju/.sdkman/candidates/java/21-tem",
+            "default": true
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.maven.enabled": true,
+    "java.templates.newFile.enabled": true,
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.formatOnSave": true
+    }
 }
